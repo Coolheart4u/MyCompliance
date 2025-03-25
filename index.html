@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Resources by Yiannakis Papageorgiou</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #1c2331;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #1c2331;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        li:hover {
+            background: #b0bec5;
+        }
+        a {
+            text-decoration: none;
+            color: #1c2331;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .search-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .publications {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .pub-box {
+            width: 250px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .pub-box:hover {
+            transform: scale(1.05);
+        }
+        .pub-box img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>    <script>
+        function searchPublications() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("pub-box");
+            for (let i = 0; i < items.length; i++) {
+                let text = items[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">Compliance Resources by Yiannakis P</div>
+    
+    <div class="container">
+        <h2>My research space</h2>
+        <ul>
+            <li><a href="https://coolheart4u.github.io/Scam-empire-Summary/">Scam Empire Summary</a></li>
+            <li><a href="https://coolheart4u.github.io/Bitcoin-Heist-2025/">Bitcoin Heist 2025</a></li>
+            <li><a href="https://coolheart4u.github.io/Reputational-Damage/">Reputational Damage</a></li>
+            <li><a href="https://coolheart4u.github.io/cfds-matrix/">Cfds AML Monitoring Matrix</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Search Publications</h2>
+        <div class="search-box">
+            <input type="text" id="search" onkeyup="searchPublications()" placeholder="Search by topic or country...">
+        </div>
+        <div class="publications">
+            <div class="pub-box">
+                <a href="https://www.occrp.org/en/news/greek-supreme-court-releases-israeli-billionaire-beny-steinmetz-blocking-extradition-order-to-romania" target="_blank">
+                    <img src="https://www.occrp.org/processed/containers/assets/images/Beny-Steinmetz.jpg/6c039f64c06150b059ac8c3c0573373c/Beny-Steinmetz.jpg" alt="Greek Supreme Court Releases Israeli Billionaire Beny Steinmetz">
+                    <p>Greek Supreme Court Releases Israeli Billionaire Beny Steinmetz</p>
+                </a>
+            </div>
+            <div class="pub-box">
+                <a href="https://cepr.org/voxeu/columns/charting-uncharted-unintended-consequences-oil-sanctions-and-dark-shipping" target="_blank">
+                    <img src="https://thelaundrynews.com/wp-content/uploads/2025/03/p-23.jpeg" alt="Charting the uncharted">
+                    <p>Charting the uncharted: The (un)intended consequences of oil sanctions and dark shipping</p>
+                </a>
+            </div>
+            <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Commission launches helpdesk to support EU SMEs comply with sanctions">
+                    <p>Commission launches helpdesk to support EU SMEs comply with sanctions</p>
+                </a>
+            </div>
+            <div class="pub-box">
+                <a href="https://www.nationalcrimeagency.gov.uk/news/a-prison-break-a-190m-cocaine-plot-money-laundered-through-gold-two-jailed-in-latest-nca-operation-venetic-case target="_blank">
+                    <img src="https://thelaundrynews.com/wp-content/uploads/2025/03/p-48.jpg" alt="">
+                    <p>A prison break, a £190m cocaine plot & money laundered through gold – two jailed in latest NCA Operation Venetic case</p>
+                </a>
+            </div>          
+            <div class="pub-box">
+                <a href="https://www.theguardian.com/news/audio/2025/mar/06/exposed-listening-in-on-a-35m-phone-scam-podcast" target="_blank">
+                    <img src="https://thelaundrynews.com/wp-content/uploads/2025/03/p-21.jpeg" alt="Commission launches helpdesk to support EU SMEs comply with sanctions">
+                    <p>Exposed-listening-in-on-a-35m-phone-scam-podcast</p>
+                </a>
+            </div>
+
+            <div class="pub-box">
+                <a href="https://www.rferl.org/a/russia-flight-dangers-sanctions-war-aviation/33323526.html" target="_blank">
+                    <img src="https://thelaundrynews.com/wp-content/uploads/2025/03/p-17.jpeg" alt="russia">
+                    <p>Russia Smuggling US Plane Parts As Sanctions Ground Airliners</p>
+                </a>
+            </div>
+
+
+
+
+
+            <div class="pub-box">
+                <a href="https://www.fdd.org/analysis/op_eds/2025/03/02/lebanon-seizes-funds-bound-for-hezbollah-at-beirut-airport/" target="_blank">
+                    <img src="https://thelaundrynews.com/wp-content/uploads/2025/03/p-24.jpg" alt="lebanon">
+                    <p>Lebanon seizes funds bound for Hezbollah at Beirut airport</p>
+                </a>
+            </div>
+
+            <!-- 
+            <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+             <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Com">
+                    <p>Commission l</p>
+                </a>
+            </div>
+            <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Commission launches helpdesk to support EU SMEs comply with sanctions">
+                    <p>Commission launches helpdesk to support EU SMEs comply with sanctions</p>
+                </a>
+            </div>
+            <div class="pub-box">
+                <a href="https://www.europeaninterest.eu/commission-launches-helpdesk-to-support-eu-smes-comply-with-sanctions/" target="_blank">
+                    <img src="https://www.europeaninterest.eu/wp-content/uploads/2025/03/Finserv.jpg" alt="Commission launches helpdesk to support EU SMEs comply with sanctions">
+                    <p>Commission launches helpdesk to support EU SMEs comply with sanctions</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
