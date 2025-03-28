@@ -534,86 +534,11 @@
                 </a>
             </div>
         -->
-             <!-- Pagination will be rendered here -->
-        <div id="pagination-container" style="text-align: center;">
-            <!-- Pagination buttons will appear here -->
             
         </div>
     </div>
 
-<!-- JavaScript for Pagination -->
-    <script>
-        const publicationsData = [
-            {
-                "title": "EU preparing 17th package of Russia sanctions, EUobserver reports",
-                "url": "https://kyivindependent.com/eu-preparing-17th-package-of-russian-sanctions-media-reports/",
-                "img": "https://assets.kyivindependent.com/content/images/2024/06/GettyImages-1775102025.jpeg",
-                "source": "kyivindependent.com",
-                "date": "28 March 2025"
-            },
-            // Add other news items here
-        ];
 
-        const itemsPerPage = 24;
-        let currentPage = 1;
-
-        function renderPublications(page) {
-            const startIndex = (page - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const publicationsToShow = publicationsData.slice(startIndex, endIndex);
-
-            const publicationsContainer = document.querySelector('.publications');
-            publicationsContainer.innerHTML = '';
-
-            publicationsToShow.forEach(publication => {
-                const pubBox = document.createElement('div');
-                pubBox.classList.add('pub-box');
-                pubBox.innerHTML = `
-                    <p>${publication.source}</p>
-                    <a href="${publication.url}" target="_blank">
-                        <img src="${publication.img}" alt="News Image">
-                        <p>${publication.title}</p>
-                        <p>Uploaded: ${publication.date}</p>
-                    </a>
-                `;
-                publicationsContainer.appendChild(pubBox);
-            });
-
-            renderPagination(page);
-        }
-
-        function renderPagination(page) {
-            const totalPages = Math.ceil(publicationsData.length / itemsPerPage);
-            const paginationContainer = document.getElementById('pagination-container');
-            paginationContainer.innerHTML = '';
-
-            if (page > 1) {
-                const prevButton = document.createElement('button');
-                prevButton.textContent = 'Previous';
-                prevButton.onclick = () => renderPublications(page - 1);
-                paginationContainer.appendChild(prevButton);
-            }
-
-            for (let i = 1; i <= totalPages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.onclick = () => renderPublications(i);
-                if (i === page) {
-                    pageButton.style.fontWeight = 'bold';
-                }
-                paginationContainer.appendChild(pageButton);
-            }
-
-            if (page < totalPages) {
-                const nextButton = document.createElement('button');
-                nextButton.textContent = 'Next';
-                nextButton.onclick = () => renderPublications(page + 1);
-                paginationContainer.appendChild(nextButton);
-            }
-        }
-
-        renderPublications(currentPage);
-    </script>
         
     <footer>
         <p>&copy; 2025 MyComplianceHub by Yiannakis Papageorgiou. All rights reserved.</p>
