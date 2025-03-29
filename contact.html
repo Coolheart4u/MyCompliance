@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MyCompliance Hub</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffefd5;
+            color: #333;
+        }
+        .header {
+            background-color: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            background-color: #ff8533;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .nav a:hover {
+            background-color: #cc5500;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cc5500;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #cc5500;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Contact MyCompliance Hub</div>
+
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research-space.html">My Research Space</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <h2>Contact</h2>
+        <p>If you have any inquiries, feel free to reach out:</p>
+        <form action="mailto:yiannakisp@hotmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
