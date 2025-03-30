@@ -24,14 +24,24 @@
             background-color: #ffefd5;
             color:black;
         }
-        .header {
-            background-color: #ff6600;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 24px;
-            font-weight: bold;
-        }
+        
+.header {
+    background-color: #ff6600;
+    color: white;
+    text-align: left; /* Align content to the left */
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;  /* Adjust size as needed */
+    margin-right: 15px;
+}
+
+            
             .nav {
             background-color: #ff8533;
             padding: 10px 0;
@@ -162,8 +172,13 @@
     </script>
 </head>
 <body>
-    <div class="header">MyCompliance Hub: Global Insights on Financial Crime and Compliance!”</div>
 
+<div class="header">
+    <img src="mycompliancehub_logo.png" alt="MyCompliance Hub Logo" class="logo">
+    MyCompliance Hub: Global Insights on Financial Crime and Compliance!
+</div>
+
+    
       <div class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
