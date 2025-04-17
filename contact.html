@@ -108,22 +108,37 @@
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
             <input type="submit" value="Send">
-        </form>
+    <h2>Subscribe to Our Updates</h2>
+<p>Want to receive occasional updates and research insights? Join the list below:</p>
+<form onsubmit="subscribeUser(event)">
+    <input type="email" id="subEmail" placeholder="Your email address" required>
+    <input type="submit" value="Subscribe">
+</form>
+
+
     </div>
 
     <script>
-        function sendEmail(event) {
-            event.preventDefault();
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            
-            let mailtoLink = `mailto:contact@amlnewshub.com?subject=Contact from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
-            
-            window.location.href = mailtoLink;
-        }
-    </script>
-    
+    function sendEmail(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        
+        let mailtoLink = `mailto:contact@amlnewshub.com?subject=Contact from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
+        
+        window.location.href = mailtoLink;
+    }
+
+    function subscribeUser(event) {
+        event.preventDefault();
+        let email = document.getElementById("subEmail").value;
+        let subject = encodeURIComponent("New Subscriber to AMLNewsHub");
+        let body = encodeURIComponent("Please add this email to the update list: " + email);
+        window.location.href = `mailto:contact@amlnewshub.com?subject=${subject}&body=${body}`;
+    }
+</script>
+
     
     <footer>
         <p>&copy; 2025 AMLNewsHub. All rights reserved.</p>
