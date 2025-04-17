@@ -98,51 +98,46 @@
     </div>
 
    <div class="container">
-    <h2 style="text-align: center;">Contact</h2>
-    <p style="text-align: center;">If you have any inquiries, feel free to reach out:</p>
+    <h2>Contact</h2>
+    <p>If you have any inquiries, feel free to reach out:</p>
 
     <!-- Contact Form -->
-    <form onsubmit="sendEmail(event)" style="text-align: left;">
-        <div style="margin-bottom: 15px;">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required style="width: 100%;">
-        </div>
+    <form onsubmit="sendEmail(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <div style="margin-bottom: 15px;">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required style="width: 100%;">
-        </div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <div style="margin-bottom: 15px;">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required style="width: 100%;"></textarea>
-        </div>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
         <input type="submit" value="Send">
     </form>
 
     <hr style="margin: 40px 0;">
 
-    <!-- Subscribe Form -->
-    <h2 style="text-align: center;">Subscribe to Our Updates</h2>
-    <p style="text-align: center;">Want to receive occasional updates and research insights? Join the list below:</p>
+   <!-- Subscribe Section -->
+<h2 style="text-align: center;">Subscribe to Our Updates</h2>
+<p style="text-align: center;">Want to receive occasional updates and research insights? Join the list below:</p>
 
-    <form onsubmit="subscribeUser(event)" id="subscribeForm" style="text-align: left;">
-        <div style="margin-bottom: 15px;">
-            <label for="subEmail">Email address:</label>
-            <input type="email" id="subEmail" placeholder="Your email address" required style="width: 100%;">
-        </div>
-
-        <input type="submit" value="Subscribe">
-
-        <p id="subscribeThankYou" style="color: green; display: none; margin-top: 10px;">
-            ✅ Thank you for subscribing to AMLNewsHub.com!
-        </p>
-    </form>
+<!-- Embedded Google Form -->
+<div style="display: flex; justify-content: center; padding: 0 10px;">
+    <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdZ3zg_XvgZ4SlSJeKjcFOl1MJB5s79Q9S7J6QFq4JYXdVG8A/viewform?embedded=true" 
+        width="100%" 
+        height="500" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        style="max-width: 640px; border: none;"
+    >
+        Loading…
+    </iframe>
 </div>
 
+</div>
 
-<!-- JavaScript -->
 <script>
     function sendEmail(event) {
         event.preventDefault();
@@ -153,22 +148,6 @@
         let mailtoLink = `mailto:contact@amlnewshub.com?subject=Contact from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
 
         window.location.href = mailtoLink;
-    }
-
-    function subscribeUser(event) {
-        event.preventDefault();
-        let email = document.getElementById("subEmail").value;
-        let subject = encodeURIComponent("New Subscriber to AMLNewsHub");
-        let body = encodeURIComponent("Please add this email to the update list: " + email);
-
-        // Open mail client (optional)
-        window.open(`mailto:contact@amlnewshub.com?subject=${subject}&body=${body}`);
-
-        // Show thank you message
-        document.getElementById("subscribeThankYou").style.display = "block";
-
-        // Clear the form
-        document.getElementById("subscribeForm").reset();
     }
 </script>
 
