@@ -98,35 +98,48 @@
     </div>
 
     <div class="container">
-        <h2>Contact</h2>
-        <p>If you have any inquiries, feel free to reach out:</p>
-        <form onsubmit="sendEmail(event)">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <input type="submit" value="Send">
+    <h2>Contact</h2>
+    <p>If you have any inquiries, feel free to reach out:</p>
+
+    <!-- Contact Form -->
+    <form onsubmit="sendEmail(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <hr style="margin: 40px 0;">
+
+    <!-- Subscribe Form -->
     <h2>Subscribe to Our Updates</h2>
-<p>Want to receive occasional updates and research insights? Join the list below:</p>
-<form onsubmit="subscribeUser(event)">
-    <input type="email" id="subEmail" placeholder="Your email address" required>
-    <input type="submit" value="Subscribe">
-</form>
+    <p>Want to receive occasional updates and research insights? Join the list below:</p>
 
+    <form onsubmit="subscribeUser(event)" id="subscribeForm">
+        <input type="email" id="subEmail" placeholder="Your email address" required>
+        <input type="submit" value="Subscribe">
+        <p id="subscribeThankYou" style="color: green; display: none; margin-top: 10px;">
+            ✅ Thank you for subscribing to AMLNewsHub.com!
+        </p>
+    </form>
+</div>
 
-    </div>
-
-    <script>
+<!-- JavaScript -->
+<script>
     function sendEmail(event) {
         event.preventDefault();
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let message = document.getElementById("message").value;
-        
+
         let mailtoLink = `mailto:contact@amlnewshub.com?subject=Contact from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
-        
+
         window.location.href = mailtoLink;
     }
 
@@ -135,7 +148,15 @@
         let email = document.getElementById("subEmail").value;
         let subject = encodeURIComponent("New Subscriber to AMLNewsHub");
         let body = encodeURIComponent("Please add this email to the update list: " + email);
-        window.location.href = `mailto:contact@amlnewshub.com?subject=${subject}&body=${body}`;
+
+        // Open mail client (optional)
+        window.open(`mailto:contact@amlnewshub.com?subject=${subject}&body=${body}`);
+
+        // Show thank you message
+        document.getElementById("subscribeThankYou").style.display = "block";
+
+        // Clear the form
+        document.getElementById("subscribeForm").reset();
     }
 </script>
 
