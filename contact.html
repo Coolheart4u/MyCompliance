@@ -102,7 +102,7 @@
     <p>If you have any inquiries, feel free to reach out:</p>
 
     <!-- Contact Form -->
-    <form onsubmit="sendEmail(event)">
+    <form action="https://formspree.io/f/xnnpknqq" method="POST">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -117,26 +117,19 @@
 
     <hr style="margin: 40px 0;">
 
-   <!-- Subscribe Section -->
-<h2 style="text-align: center;">Subscribe to Our Updates</h2>
-<p style="text-align: center;">Want to receive occasional updates and research insights? Join the list below:</p>
+    <!-- Subscribe Form -->
+    <h2>Subscribe to Our Updates</h2>
+    <p>Want to receive occasional updates and research insights? Join the list below:</p>
 
-<!-- Embedded Google Form -->
-<div style="display: flex; justify-content: center; padding: 0 10px;">
-    <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdZ3zg_XvgZ4SlSJeKjcFOl1MJB5s79Q9S7J6QFq4JYXdVG8A/viewform?embedded=true" 
-        width="100%" 
-        height="500" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-        style="max-width: 640px; border: none;"
-    >
-        Loading…
-    </iframe>
+    <form action="https://formspree.io/f/xnnpknqq" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <input type="submit" value="Subscribe">
+        <p id="subscribeThankYou" style="color: green; display: none; margin-top: 10px;">
+            ✅ Thank you for subscribing to AMLNewsHub.com!
+        </p>
+    </form>
 </div>
 
-</div>
 
 <script>
     function sendEmail(event) {
