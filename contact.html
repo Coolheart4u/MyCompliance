@@ -45,7 +45,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: initial;
         }
         input, textarea {
             width: 100%;
@@ -98,24 +98,24 @@
     </div>
 
    <div class="container">
-    <h2>Contact</h2>
-    <p>If you have any inquiries, feel free to reach out:</p>
+    <h2 style="text-align: center;">Contact</h2>
+    <p style="text-align: center;">If you have any inquiries, feel free to reach out:</p>
 
     <!-- Contact Form -->
-    <form onsubmit="sendEmail(event)">
-        <div style="margin-bottom: 15px; text-align: left;">
+    <form onsubmit="sendEmail(event)" style="text-align: left;">
+        <div style="margin-bottom: 15px;">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required style="width: 100%;">
         </div>
 
-        <div style="margin-bottom: 15px; text-align: left;">
+        <div style="margin-bottom: 15px;">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required style="width: 100%;">
         </div>
 
-        <div style="margin-bottom: 15px; text-align: left;">
+        <div style="margin-bottom: 15px;">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required style="width: 100%;"></textarea>
         </div>
 
         <input type="submit" value="Send">
@@ -124,13 +124,13 @@
     <hr style="margin: 40px 0;">
 
     <!-- Subscribe Form -->
-    <h2>Subscribe to Our Updates</h2>
-    <p>Want to receive occasional updates and research insights? Join the list below:</p>
+    <h2 style="text-align: center;">Subscribe to Our Updates</h2>
+    <p style="text-align: center;">Want to receive occasional updates and research insights? Join the list below:</p>
 
-    <form onsubmit="subscribeUser(event)" id="subscribeForm">
-        <div style="margin-bottom: 15px; text-align: left;">
+    <form onsubmit="subscribeUser(event)" id="subscribeForm" style="text-align: left;">
+        <div style="margin-bottom: 15px;">
             <label for="subEmail">Email address:</label>
-            <input type="email" id="subEmail" placeholder="Your email address" required>
+            <input type="email" id="subEmail" placeholder="Your email address" required style="width: 100%;">
         </div>
 
         <input type="submit" value="Subscribe">
