@@ -13,16 +13,18 @@
       color: #575757; /* Adjusted font color */
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     .container {
       width: 90%;
       margin: 0 auto;
+      padding: 10px;
     }
     h1, h2, h3 {
       color: #575757; /* Adjusted color for headings */
     }
     .slide {
-      padding: 40px;
+      padding: 20px;
       margin: 20px 0;
       background-color: rgba(251, 238, 235, 0.9); /* Slight transparency for boxes */
       border: 2px solid #FF6600; /* Orange border */
@@ -30,12 +32,12 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .slide h2 {
-      font-size: 36px; /* Larger font size for headings */
+      font-size: 28px; /* Adjusted for mobile responsiveness */
       margin-bottom: 20px;
       color: #FF6600; /* Orange color for headings */
     }
     .slide p, .slide ul {
-      font-size: 20px; /* Larger font size for text */
+      font-size: 18px; /* Adjusted font size for readability on mobile */
       line-height: 1.8;
     }
     .slide table {
@@ -45,7 +47,7 @@
     }
     .slide th, .slide td {
       border: 1px solid #FF6600; /* Orange borders for table */
-      padding: 15px;
+      padding: 12px;
       text-align: left;
       color: #575757; /* Adjusted font color for table text */
     }
@@ -70,12 +72,53 @@
       overflow-x: auto;
     }
     .predicate-offences, .penalties {
-      font-size: 20px;
+      font-size: 18px; /* Adjusted font size for readability on mobile */
     }
     .section-header {
       font-size: 24px;
       margin-top: 30px;
       color: #FF6600;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+      .slide h2 {
+        font-size: 24px; /* Adjusted for smaller screens */
+      }
+      .slide p, .slide ul {
+        font-size: 16px; /* Adjusted for better readability on mobile */
+      }
+      .btn {
+        width: 100%; /* Full-width button on mobile */
+        font-size: 18px;
+      }
+      .slide table {
+        font-size: 14px; /* Smaller table text for mobile devices */
+      }
+      .slide th, .slide td {
+        padding: 10px; /* Reduced padding for mobile screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slide h2 {
+        font-size: 20px; /* Further reduce font size for small mobile screens */
+      }
+      .slide p, .slide ul {
+        font-size: 14px; /* Even smaller font size for small screens */
+      }
+      .btn {
+        font-size: 16px; /* Adjusted font size for small mobile buttons */
+      }
+      .table-container {
+        font-size: 12px; /* Reduced font size for better table readability */
+      }
+      .slide th, .slide td {
+        padding: 8px; /* Adjusted padding for tighter fit on small screens */
+      }
     }
   </style>
 </head>
@@ -131,7 +174,7 @@
       </ul>
     </div>
 
-    <!-- Slide 6: Comparison of AMLR, AMLD6, AMLAR -->
+    <!-- Slide 6: Comparison of AMLR, AMLD6, and AMLAR -->
     <div class="slide">
       <h2>Comparison of AMLR, AMLD6, and AMLAR</h2>
       <table>
@@ -198,32 +241,29 @@
       </ul>
     </div>
 
-    <!-- Slide 9: Conclusion -->
+    <!-- Slide 9: AML Compliance for Businesses -->
     <div class="slide">
-      <h2>Conclusion</h2>
-      <p>The new EU anti-money laundering regulations (AMLR, AMLD6, and AMLAR) are designed to enhance transparency, prevent illicit financial flows, and increase accountability for businesses and individuals involved in money laundering.</p>
-      <p>Businesses must ensure compliance with these regulations or face serious penalties. The EU aims for a unified approach across all member states to combat financial crime.</p>
+      <h2>AML Compliance for Businesses</h2>
+      <p>To ensure compliance, businesses must implement effective internal controls, conduct thorough due diligence, and ensure regular reporting to relevant authorities. Key actions include:</p>
+      <ul>
+        <li>Regular Risk Assessments</li>
+        <li>Training for Employees</li>
+        <li>Monitoring and Reporting Suspicious Activities</li>
+        <li>Maintaining Records for 5-10 Years</li>
+      </ul>
     </div>
 
-    <!-- Slide 10: Q&A 
+    <!-- Slide 10: EU and International Cooperation 
     <div class="slide">
-      <h2>Questions?</h2>
-      <p>Feel free to ask any questions about the EU's new anti-money laundering legislation!</p>
-      <button class="btn">Ask a Question</button>
+      <h2>EU and International Cooperation</h2>
+      <p>The EU's AML framework encourages member states to cooperate internationally to combat money laundering. This includes sharing intelligence, coordinating investigations, and enhancing sanctions against money laundering practices.</p>
     </div>
 -->
-    <!-- Slide 11: References -->
+    <!-- Slide 11: Conclusion -->
     <div class="slide">
-      <h2>References</h2>
-      <p>For more information, you can refer to the following official documents and resources:</p>
-      <ul>
-        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1624" target="_blank">EU Anti-Money Laundering Regulation (AMLR) - Regulation (EU) 2024/1624</a></li>
-        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024L1640" target="_blank">Anti-Money Laundering Directive (AMLD6) - Directive (EU) 2024/1640</a></li>
-        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1620" target="_blank">Anti-Money Laundering Authority Regulation (AMLAR) - Regulation (EU) 2024/1620</a></li>
-        <li><a href="https://kpmg.com/mt/en/home/insights/2024/07/the-eu-aml-transformation-the-single-rulebook-6amld-and-amla.html" target="_blank">KPMG Summary of the EU's AML Transformation</a></li>
-        <li><a href="https://www.dlapiper.com/en/insights/publications/2024/12/the-new-anti-money-laundering-rules-what-you-need-to-know" target="_blank">DLA Piper - The New Anti-Money Laundering Rules</a></li>
-        <li><a href="https://www.arendt.com/news-insights/news/the-new-aml-cft-package-finally-adopted-by-the-eu-parliament/" target="_blank">Arendt - EU AML/CFT Package</a></li>
-      </ul>
+      <h2>Conclusion</h2>
+      <p>The new EU anti-money laundering regulations (AMLR, AMLD6, and AMLAR) are set to enhance the fight against financial crime and ensure greater protection of the EU's financial system. Businesses must align with these evolving standards to avoid penalties and ensure compliance.</p>
+      <button class="btn">Learn More</button>
     </div>
   </div>
 
