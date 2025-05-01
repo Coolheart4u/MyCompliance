@@ -286,25 +286,17 @@
     document.addEventListener('DOMContentLoaded', () => {
         showPage(1);
 
-        // Dynamic news ticker from .pub-box headlines
+        // News ticker content
+        const latestNews = [
+            "Breaking: Major AML legislation introduced in the EU.",
+            "Interpol busts a $500M global laundering network.",
+            "FinCEN warns about rising crypto-related fraud cases.",
+            "OFAC adds new names to global sanctions list."
+        ];
+
         const ticker = document.getElementById("tickerContent");
-        const pubBoxes = document.querySelectorAll(".pub-box a");
-
-        const headlines = [];
-        for (let i = 0; i < 4 && i < pubBoxes.length; i++) {
-            const anchor = pubBoxes[i];
-            const titleElement = anchor.querySelector("p:nth-of-type(2)");
-            if (titleElement) {
-                const title = titleElement.textContent.trim();
-                const url = anchor.href;
-                headlines.push(`<a href="${url}" target="_blank">${title}</a>`);
-            }
-        }
-
-        if (headlines.length > 0 && ticker) {
-            ticker.innerHTML = headlines.join(" ⚡ ");
-        } else if (ticker) {
-            ticker.textContent = "No recent headlines found.";
+        if (ticker) {
+            ticker.textContent = latestNews.join(" ⚡ ");
         }
     });
 </script>
