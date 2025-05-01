@@ -60,6 +60,30 @@
             background-color: #cc5500;
             border-radius: 5px;
         }
+.news-ticker {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ticker-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
             
         .container {
@@ -207,62 +231,76 @@
 
 
     <script>
-        function searchPublications() {
-            let input = document.getElementById("search").value.toLowerCase();
-            let items = document.getElementsByClassName("pub-box");
-            for (let i = 0; i < items.length; i++) {
-                let text = items[i].innerText.toLowerCase();
-                items[i].style.display = text.includes(input) ? "block" : "none";
-            }
+    function searchPublications() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let items = document.getElementsByClassName("pub-box");
+        for (let i = 0; i < items.length; i++) {
+            let text = items[i].innerText.toLowerCase();
+            items[i].style.display = text.includes(input) ? "block" : "none";
         }
-
-        const itemsPerPage = 36;
-        let currentPage = 1;
-
-        function showPage(page) {
-            const items = document.querySelectorAll('.pub-box');
-            const totalPages = Math.ceil(items.length / itemsPerPage);
-            currentPage = Math.max(1, Math.min(page, totalPages));
-
-            items.forEach((item, i) => {
-                item.style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? 'block' : 'none';
-            });
-
-            updatePagination();
-        }
-
-        function updatePagination() {
-            const items = document.querySelectorAll('.pub-box');
-            const totalPages = Math.ceil(items.length / itemsPerPage);
-            const pagination = document.getElementById('pagination');
-            pagination.innerHTML = '';
-
-            for (let i = 1; i <= totalPages; i++) {
-                const btn = document.createElement('button');
-                btn.textContent = i;
-                btn.className = (i === currentPage) ? 'active-page' : '';
-                btn.onclick = () => showPage(i);
-                pagination.appendChild(btn);
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Show/hide button on scroll
-  window.onscroll = function () {
-    const btn = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
     }
-  };
-        document.addEventListener('DOMContentLoaded', () => {
-            showPage(1);
+
+    const itemsPerPage = 36;
+    let currentPage = 1;
+
+    function showPage(page) {
+        const items = document.querySelectorAll('.pub-box');
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        currentPage = Math.max(1, Math.min(page, totalPages));
+
+        items.forEach((item, i) => {
+            item.style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? 'block' : 'none';
         });
-    </script>
+
+        updatePagination();
+    }
+
+    function updatePagination() {
+        const items = document.querySelectorAll('.pub-box');
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.className = (i === currentPage) ? 'active-page' : '';
+            btn.onclick = () => showPage(i);
+            pagination.appendChild(btn);
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onscroll = function () {
+        const btn = document.getElementById("backToTopBtn");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage(1);
+
+        // News ticker content
+        const latestNews = [
+            "Breaking: Major AML legislation introduced in the EU.",
+            "Interpol busts a $500M global laundering network.",
+            "FinCEN warns about rising crypto-related fraud cases.",
+            "OFAC adds new names to global sanctions list."
+        ];
+
+        const ticker = document.getElementById("tickerContent");
+        if (ticker) {
+            ticker.textContent = latestNews.join(" ⚡ ");
+        }
+    });
+</script>
+
 </head>
 <body>
 
@@ -279,6 +317,13 @@
         <a href="contact.html">Contact</a>
           <a href="contact.html">Subscribe</a>
     </div>
+
+    <div class="news-ticker">
+  <div class="ticker-content" id="tickerContent">
+    Loading latest news...
+  </div>
+</div>
+
     
     <div class="container">
         <p>Welcome to the Anti Money Laundering News Hub, your one-stop destination for insights, valuable research, and the latest updates on financial crime, sanctions, compliance and regulations . Explore, learn and Connect! </p>
