@@ -36,9 +36,27 @@
       margin-bottom: 40px;
     }
     .chart {
-      width: 100%;
-      height: auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       margin-top: 20px;
+    }
+    .chart div {
+      flex: 1;
+      padding: 10px;
+      border-right: 1px solid #dee2e6;
+    }
+    .chart div:last-child {
+      border-right: none;
+    }
+    .chart h4 {
+      color: #004085;
+      margin-bottom: 5px;
     }
     pre {
       background-color: #f1f1f1;
@@ -110,8 +128,28 @@
 
   <div class="section">
     <h2>Implementation Roadmap (DMAIC)</h2>
-    <img class="chart" src="https://www.6sigma.us/wp-content/uploads/2020/02/DMAIC-Roadmap-Infographic.jpg" alt="DMAIC Roadmap Infographic">
-
+    <div class="chart">
+      <div>
+        <h4>Define</h4>
+        <p>Identify project goals, scope, stakeholders, and compliance objectives.</p>
+      </div>
+      <div>
+        <h4>Measure</h4>
+        <p>Map current processes, gather data on update cycles, classify risk tiers.</p>
+      </div>
+      <div>
+        <h4>Analyze</h4>
+        <p>Evaluate inefficiencies, customer pain points, and regulatory gaps.</p>
+      </div>
+      <div>
+        <h4>Improve</h4>
+        <p>Develop solutions: automation, templates, flexible documents, and risk-tiering.</p>
+      </div>
+      <div>
+        <h4>Control</h4>
+        <p>Implement KPIs, audits, training, and continuous monitoring systems.</p>
+      </div>
+    </div>
 
     <h3>1. Define</h3>
     <ul>
@@ -206,3 +244,4 @@ Effective Date: [Insert Date]
   </div>
 </body>
 </html>
+
