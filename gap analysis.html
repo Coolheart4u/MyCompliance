@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AML Gap Analysis & Implementation Roadmap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #004085;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #dee2e6;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e9ecef;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .chart {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    pre {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-left: 4px solid #004085;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>AML Gap Analysis & Implementation Roadmap</h1>
+
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>This document provides a comprehensive gap analysis and actionable roadmap for aligning current AML (Anti-Money Laundering) procedures with the updated directive issued by the Central Bank of Cyprus (CBC). The directive emphasizes a risk-based approach to client updates, simplified document requirements, and improved accessibility for all clients. The goal is to enhance compliance while streamlining operations and improving the customer experience, using Lean Six Sigma methodologies.</p>
+  </div>
+
+  <div class="section">
+    <h2>Gap Analysis</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Directive Update</th>
+          <th>Current State</th>
+          <th>Gap Identified</th>
+          <th>Impact (Risk/Opportunity)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Risk-Based Frequency of Relationship Updates</td>
+          <td>Uniform update cycles</td>
+          <td>Static process not risk-aligned</td>
+          <td>Unnecessary workload; inefficiency</td>
+        </tr>
+        <tr>
+          <td>Use of ID Copies</td>
+          <td>Original ID required</td>
+          <td>Non-compliance with simplified methods</td>
+          <td>Slower process; client friction</td>
+        </tr>
+        <tr>
+          <td>Leverage Existing Data</td>
+          <td>Request full re-documentation</td>
+          <td>Duplicate effort</td>
+          <td>Inefficiency; poor experience</td>
+        </tr>
+        <tr>
+          <td>Alternative Evidence for Health-Impaired Clients</td>
+          <td>Rigid document requirements</td>
+          <td>Inflexibility</td>
+          <td>Risk of exclusion</td>
+        </tr>
+        <tr>
+          <td>Flexible Proof of Address</td>
+          <td>Only recent physical documents</td>
+          <td>Limited options</td>
+          <td>Non-alignment; customer attrition risk</td>
+        </tr>
+        <tr>
+          <td>Certification by Third Parties</td>
+          <td>Internal verification only</td>
+          <td>Narrow certification channels</td>
+          <td>Slows onboarding; poor service</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Implementation Roadmap (DMAIC)</h2>
+    <img class="chart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DMAIC_Process.svg/1280px-DMAIC_Process.svg.png" alt="DMAIC Roadmap Chart">
+
+    <h3>1. Define</h3>
+    <ul>
+      <li>Goal: Align KYC/AML procedures with CBC directive.</li>
+      <li>Stakeholders: Compliance, Operations, IT, Customer Service</li>
+    </ul>
+
+    <h3>2. Measure</h3>
+    <ul>
+      <li>Map current KYC update processes.</li>
+      <li>Track cycle times, errors, complaints.</li>
+      <li>Risk-tier clients (high/medium/low).</li>
+    </ul>
+
+    <h3>3. Analyze</h3>
+    <ul>
+      <li>Identify process bottlenecks.</li>
+      <li>Use Voice of Customer (VOC) data.</li>
+      <li>Benchmark EU best practices.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Key Implementation Actions</h2>
+    <ul>
+      <li><strong>Risk-Based Frequency:</strong> Automate checks based on client risk. Low-risk: 3 years; High-risk: annually.</li>
+      <li><strong>ID Copy Acceptance:</strong> Enable secure upload of scanned/certified copies via customer portal.</li>
+      <li><strong>Use Existing Data:</strong> Implement smart forms prefilled with known information.</li>
+      <li><strong>Alternative Documents for Health-Impaired:</strong> Accept caregiver confirmations or medical attestations.</li>
+      <li><strong>Flexible Proof of Address:</strong> Accept e-documents from CYTA, JCC, e-government platforms.</li>
+      <li><strong>3rd-Party Certification:</strong> Accept certifications from lawyers, district offices, and digital signatures.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Control & Monitoring</h2>
+    <ul>
+      <li>Track KPIs: update time, timely completions, client escalations.</li>
+      <li>Quarterly compliance audits.</li>
+      <li>Post-update surveys and internal feedback channels.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Lean Six Sigma Tools</h2>
+    <ul>
+      <li>SIPOC, Value Stream Mapping</li>
+      <li>FMEA for risk anticipation</li>
+      <li>RPA and CRM integrations for automation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Standard Operating Procedure (SOP) Template</h2>
+    <pre>
+SOP Title: AML Customer Update Process
+Department: Compliance & Operations
+Version: 1.0
+Effective Date: [Insert Date]
+
+1. PURPOSE:
+   To outline a standardized, risk-based process for customer information updates in compliance with CBC AML directives.
+
+2. SCOPE:
+   Applies to all customer types: low, medium, and high-risk.
+
+3. RESPONSIBILITIES:
+   - Compliance Officer: Oversight and audit
+   - Front Office: Execution of updates
+   - IT: Maintain systems and automation
+
+4. PROCEDURE:
+   4.1. Client Risk Classification (initial onboarding and annual review)
+   4.2. Trigger-based Updates (e.g., large transactions, address change)
+   4.3. Documentation Requirements by Risk Tier
+        - Low Risk: Confirm existing data, ID copy, utility or e-government proof
+        - High Risk: Full re-verification annually
+   4.4. Acceptable ID and Address Proof
+        - Certified copy, digital uploads, 3rd-party verification
+   4.5. Accessibility Support
+        - Alternative options for health-affected individuals
+
+5. DOCUMENT RETENTION:
+   Store all records in secure KYC system with timestamp.
+
+6. MONITORING & REVIEW:
+   Monthly reporting; Quarterly audits
+
+7. EXCEPTIONS:
+   Must be approved by Compliance Manager
+    </pre>
+  </div>
+</body>
+</html>
